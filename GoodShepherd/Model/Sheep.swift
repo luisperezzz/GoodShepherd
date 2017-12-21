@@ -8,14 +8,8 @@
 
 import UIKit
 
-class Sheep: NSObject {
+class Sheep: Believer {
     
-    var firstName : String = ""
-    var lastName : String = ""
     
-    override init() {
-        super.init()
-    }
-
     
 }

@@ -25,25 +25,45 @@ class CurrentCellVC: UIViewController {
     }
     
     @IBAction func addSheepAction(_ sender: UIBarButtonItem) {
-        let contactsVC = CNContactPickerViewController()
-        self.present(contactsVC, animated: true, completion: nil)
+        
+        ContactManager.requestContacts { (contacts, error) in
+            
+            if error == nil {
+                print("Contacts: \(contacts)")
+            }
+            else {
+                switch error!.code {
+                case ErrorCode.contactAccessDenied.rawValue:
+                    let alert = UIAlertController(title: error!.localizedDescription, message: "Enable access in Settings", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Settings", style: .default, handler: { (alertAction) in
+                        UIApplication.shared.open(URL(string:UIApplicationOpenSettingsURLString)!)
+                    }))
+                    alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                    
+                case ErrorCode.contactAccessRestricted.rawValue:
+                    let alert = UIAlertController(title: error!.localizedDescription, message: "Check the app restrictions first", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                default:
+                    break
+                    
+                }
+                
+            }
+        }
+   
     }
+    
+    
+    
+   
     
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
@@ -67,8 +87,9 @@ extension CurrentCellVC: UITableViewDelegate {
 }
 
 extension CurrentCellVC: CNContactPickerDelegate {
-    func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
-        print("selected contact: \(contact)")
+    
+    func contactPicker(_ picker: CNContactPickerViewController, didSelect contacts: [CNContact]) {
+        
     }
     
 }

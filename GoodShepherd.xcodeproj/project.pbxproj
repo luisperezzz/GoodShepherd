@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		252684031F44031800860C4C /* ContactManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252684021F44031800860C4C /* ContactManager.swift */; };
+		2544F4731F57050900428638 /* ContactsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2544F4721F57050900428638 /* ContactsVC.swift */; };
+		25F518081F48B4CA00648CCC /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F518071F48B4CA00648CCC /* Contact.swift */; };
+		25F5180A1F4D40D100648CCC /* Believer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F518091F4D40D100648CCC /* Believer.swift */; };
 		47C2E6DCBA78B8D35DB292BE /* Pods_GoodShepherd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65CD95D9A2F1BB8D5F139F09 /* Pods_GoodShepherd.framework */; };
 		D1DD48F81F3D2638001C3523 /* CurrentCellVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DD48F71F3D2638001C3523 /* CurrentCellVC.swift */; };
 		D1DD48FB1F3D27A9001C3523 /* SheepSummaryTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DD48FA1F3D27A9001C3523 /* SheepSummaryTVCell.swift */; };
@@ -18,7 +22,24 @@
 		D1FE171E1F328CCB00753949 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1FE171C1F328CCB00753949 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2544E4041F75F6B900AE793F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		252684021F44031800860C4C /* ContactManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactManager.swift; path = Manager/ContactManager.swift; sourceTree = "<group>"; };
+		2544F4721F57050900428638 /* ContactsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactsVC.swift; path = Controller/Contacts/ContactsVC.swift; sourceTree = "<group>"; };
+		25F518071F48B4CA00648CCC /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Contact.swift; path = Model/Contact.swift; sourceTree = "<group>"; };
+		25F518091F4D40D100648CCC /* Believer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Believer.swift; path = Model/Believer.swift; sourceTree = "<group>"; };
 		65CD95D9A2F1BB8D5F139F09 /* Pods_GoodShepherd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoodShepherd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1DD48F71F3D2638001C3523 /* CurrentCellVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CurrentCellVC.swift; path = Controller/CurrentCellVC.swift; sourceTree = "<group>"; };
 		D1DD48FA1F3D27A9001C3523 /* SheepSummaryTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SheepSummaryTVCell.swift; path = View/TVCells/SheepSummaryTVCell.swift; sourceTree = "<group>"; };
@@ -46,6 +67,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		252684011F44013F00860C4C /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				252684021F44031800860C4C /* ContactManager.swift */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		2544F4711F5704E500428638 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				2544F4721F57050900428638 /* ContactsVC.swift */,
+			);
+			name = Contacts;
+			sourceTree = "<group>";
+		};
 		6BBA6305B22F00B60301FB0A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +103,7 @@
 		D1DD48F51F3D22C3001C3523 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2544F4711F5704E500428638 /* Contacts */,
 				D1DD48F71F3D2638001C3523 /* CurrentCellVC.swift */,
 			);
 			name = Controller;
@@ -74,6 +112,8 @@
 		D1DD48F61F3D22C9001C3523 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				25F518071F48B4CA00648CCC /* Contact.swift */,
+				25F518091F4D40D100648CCC /* Believer.swift */,
 				D1DD48FC1F3D32A0001C3523 /* Sheep.swift */,
 			);
 			name = Model;
@@ -108,10 +148,11 @@
 		D1FE17101F328CCB00753949 /* GoodShepherd */ = {
 			isa = PBXGroup;
 			children = (
+				D1FE17111F328CCB00753949 /* AppDelegate.swift */,
+				252684011F44013F00860C4C /* Manager */,
 				D1DD48F61F3D22C9001C3523 /* Model */,
 				D1DD48F51F3D22C3001C3523 /* Controller */,
 				D1DD48F41F3D223F001C3523 /* View */,
-				D1FE17111F328CCB00753949 /* AppDelegate.swift */,
 				D1FE17131F328CCB00753949 /* FirstViewController.swift */,
 				D1FE17171F328CCB00753949 /* Main.storyboard */,
 				D1FE171A1F328CCB00753949 /* Assets.xcassets */,
@@ -142,6 +183,7 @@
 				D1FE170C1F328CCB00753949 /* Resources */,
 				4436B052C245A636A8891B3E /* [CP] Embed Pods Frameworks */,
 				D8A701DBAA85FE0571EAB0CE /* [CP] Copy Pods Resources */,
+				2544E4041F75F6B900AE793F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -228,7 +270,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		D8A701DBAA85FE0571EAB0CE /* [CP] Copy Pods Resources */ = {
@@ -255,9 +297,13 @@
 			files = (
 				D1DD48FB1F3D27A9001C3523 /* SheepSummaryTVCell.swift in Sources */,
 				D1DD48FD1F3D32A0001C3523 /* Sheep.swift in Sources */,
+				2544F4731F57050900428638 /* ContactsVC.swift in Sources */,
 				D1FE17121F328CCB00753949 /* AppDelegate.swift in Sources */,
 				D1FE17141F328CCB00753949 /* FirstViewController.swift in Sources */,
+				252684031F44031800860C4C /* ContactManager.swift in Sources */,
 				D1DD48F81F3D2638001C3523 /* CurrentCellVC.swift in Sources */,
+				25F518081F48B4CA00648CCC /* Contact.swift in Sources */,
+				25F5180A1F4D40D100648CCC /* Believer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,7 +431,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 454Q49F5R3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = GoodShepherd/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.goodshepherd.GoodShepherd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -401,7 +452,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 454Q49F5R3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = GoodShepherd/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.goodshepherd.GoodShepherd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
