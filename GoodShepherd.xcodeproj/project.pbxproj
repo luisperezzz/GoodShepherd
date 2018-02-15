@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		252684031F44031800860C4C /* ContactManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252684021F44031800860C4C /* ContactManager.swift */; };
 		2544F4731F57050900428638 /* ContactsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2544F4721F57050900428638 /* ContactsVC.swift */; };
+		2591411B2034DFBC00A4A072 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2591411A2034DFBC00A4A072 /* Authentication.storyboard */; };
 		25F518081F48B4CA00648CCC /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F518071F48B4CA00648CCC /* Contact.swift */; };
 		25F5180A1F4D40D100648CCC /* Believer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F518091F4D40D100648CCC /* Believer.swift */; };
 		47C2E6DCBA78B8D35DB292BE /* Pods_GoodShepherd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65CD95D9A2F1BB8D5F139F09 /* Pods_GoodShepherd.framework */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		252684021F44031800860C4C /* ContactManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactManager.swift; path = Manager/ContactManager.swift; sourceTree = "<group>"; };
 		2544F4721F57050900428638 /* ContactsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactsVC.swift; path = Controller/Contacts/ContactsVC.swift; sourceTree = "<group>"; };
+		2591411A2034DFBC00A4A072 /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Authentication.storyboard; path = View/Authentication.storyboard; sourceTree = "<group>"; };
 		25F518071F48B4CA00648CCC /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Contact.swift; path = Model/Contact.swift; sourceTree = "<group>"; };
 		25F518091F4D40D100648CCC /* Believer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Believer.swift; path = Model/Believer.swift; sourceTree = "<group>"; };
 		65CD95D9A2F1BB8D5F139F09 /* Pods_GoodShepherd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoodShepherd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,6 +160,7 @@
 				D1FE171A1F328CCB00753949 /* Assets.xcassets */,
 				D1FE171C1F328CCB00753949 /* LaunchScreen.storyboard */,
 				D1FE171F1F328CCB00753949 /* Info.plist */,
+				2591411A2034DFBC00A4A072 /* Authentication.storyboard */,
 			);
 			path = GoodShepherd;
 			sourceTree = "<group>";
@@ -201,12 +204,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = Term;
 				TargetAttributes = {
 					D1FE170D1F328CCB00753949 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 454Q49F5R3;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -234,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2591411B2034DFBC00A4A072 /* Authentication.storyboard in Resources */,
 				D1FE171E1F328CCB00753949 /* LaunchScreen.storyboard in Resources */,
 				D1FE171B1F328CCB00753949 /* Assets.xcassets in Resources */,
 				D1FE17191F328CCB00753949 /* Main.storyboard in Resources */,
@@ -339,7 +344,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -347,7 +354,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -390,7 +401,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -398,7 +411,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -441,7 +458,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.goodshepherd.GoodShepherd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -462,7 +481,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.goodshepherd.GoodShepherd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

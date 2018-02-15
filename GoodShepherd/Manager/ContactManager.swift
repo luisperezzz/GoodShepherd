@@ -60,7 +60,8 @@ class ContactManager {
         var contacts = [Contact]()
         
         try? self.contactStore.enumerateContacts(with: request, usingBlock: { (contact, error) in
-            contacts.append(Contact(firstName: contact.givenName, lastName: contact.familyName))
+           
+            contacts.append(Contact(firstGivenName: contact.givenName, firstSurname: contact.familyName))
         })
         return contacts
     }

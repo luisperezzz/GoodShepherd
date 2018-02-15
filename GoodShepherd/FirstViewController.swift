@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import FacebookCore
-import FacebookLogin
+//import FacebookCore
+//import FacebookLogin
 
 class FirstViewController: UIViewController {
     
@@ -19,25 +19,23 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        /*
         if AccessToken.current != nil {
             print("ya esta logeado")
             self.loginButton.setTitle("Log Out", for: .normal)
-            
-            
-            
-            
             
         }
         else {
             print("no esta logeado")
             self.loginButton.setTitle("Log In", for: .normal)
         }
-        
+        */
         
         
     }
     
     @IBAction func loginAction() {
+        /*
         let loginManager = LoginManager()
         if AccessToken.current != nil {
             print("ya esta logeado")
@@ -59,10 +57,8 @@ class FirstViewController: UIViewController {
                     self.loginButton.setTitle("Log Out", for: .normal)
                 }
             })
-            
-           
-                
         }
+        */
     }
     
     @IBAction func getFriends(_ sender: UIButton) {
@@ -70,6 +66,7 @@ class FirstViewController: UIViewController {
     }
     
     func requestFriends() {
+        /*
         let graphRequest = GraphRequest(graphPath: "/me/taggable_friends", parameters: ["fields": "email, name, gender, picture, birthday, hometown"], accessToken: AccessToken.current, httpMethod: .GET, apiVersion: GraphAPIVersion.defaultVersion)
         
         graphRequest.start { (response, result) in
@@ -84,6 +81,7 @@ class FirstViewController: UIViewController {
                 
             }
         }
+        */
     }
     
  
