@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00D27D9E203E3667003C6739 /* CellPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D27D9D203E3667003C6739 /* CellPickerViewController.swift */; };
+		00D27DA0203E367B003C6739 /* MacroPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D27D9F203E367B003C6739 /* MacroPickerViewController.swift */; };
+		00D27DA3203E36F0003C6739 /* MacroLeaderTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D27DA2203E36F0003C6739 /* MacroLeaderTVCell.swift */; };
 		252684031F44031800860C4C /* ContactManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252684021F44031800860C4C /* ContactManager.swift */; };
 		2544F4731F57050900428638 /* ContactsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2544F4721F57050900428638 /* ContactsVC.swift */; };
 		2591411B2034DFBC00A4A072 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2591411A2034DFBC00A4A072 /* Authentication.storyboard */; };
@@ -37,6 +40,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		00D27D9D203E3667003C6739 /* CellPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CellPickerViewController.swift; path = Controller/Authentication/Signup/CellPickerViewController.swift; sourceTree = "<group>"; };
+		00D27D9F203E367B003C6739 /* MacroPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MacroPickerViewController.swift; path = Controller/Authentication/Signup/MacroPickerViewController.swift; sourceTree = "<group>"; };
+		00D27DA2203E36F0003C6739 /* MacroLeaderTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MacroLeaderTVCell.swift; path = Controller/Authentication/Signup/TVCells/MacroLeaderTVCell.swift; sourceTree = "<group>"; };
 		252684021F44031800860C4C /* ContactManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactManager.swift; path = Manager/ContactManager.swift; sourceTree = "<group>"; };
 		2544F4721F57050900428638 /* ContactsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactsVC.swift; path = Controller/Contacts/ContactsVC.swift; sourceTree = "<group>"; };
 		2591411A2034DFBC00A4A072 /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Authentication.storyboard; path = View/Authentication.storyboard; sourceTree = "<group>"; };
@@ -69,6 +75,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00D27D9C203E3601003C6739 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				00D27DA1203E368B003C6739 /* TVCells */,
+				00D27D9F203E367B003C6739 /* MacroPickerViewController.swift */,
+				00D27D9D203E3667003C6739 /* CellPickerViewController.swift */,
+			);
+			name = Authentication;
+			sourceTree = "<group>";
+		};
+		00D27DA1203E368B003C6739 /* TVCells */ = {
+			isa = PBXGroup;
+			children = (
+				00D27DA2203E36F0003C6739 /* MacroLeaderTVCell.swift */,
+			);
+			name = TVCells;
+			sourceTree = "<group>";
+		};
 		252684011F44013F00860C4C /* Manager */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +129,7 @@
 		D1DD48F51F3D22C3001C3523 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				00D27D9C203E3601003C6739 /* Authentication */,
 				2544F4711F5704E500428638 /* Contacts */,
 				D1DD48F71F3D2638001C3523 /* CurrentCellVC.swift */,
 			);
@@ -269,13 +294,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoodShepherd-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D8A701DBAA85FE0571EAB0CE /* [CP] Copy Pods Resources */ = {
@@ -302,6 +330,7 @@
 			files = (
 				D1DD48FB1F3D27A9001C3523 /* SheepSummaryTVCell.swift in Sources */,
 				D1DD48FD1F3D32A0001C3523 /* Sheep.swift in Sources */,
+				00D27D9E203E3667003C6739 /* CellPickerViewController.swift in Sources */,
 				2544F4731F57050900428638 /* ContactsVC.swift in Sources */,
 				D1FE17121F328CCB00753949 /* AppDelegate.swift in Sources */,
 				D1FE17141F328CCB00753949 /* FirstViewController.swift in Sources */,
@@ -309,6 +338,8 @@
 				D1DD48F81F3D2638001C3523 /* CurrentCellVC.swift in Sources */,
 				25F518081F48B4CA00648CCC /* Contact.swift in Sources */,
 				25F5180A1F4D40D100648CCC /* Believer.swift in Sources */,
+				00D27DA0203E367B003C6739 /* MacroPickerViewController.swift in Sources */,
+				00D27DA3203E36F0003C6739 /* MacroLeaderTVCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
