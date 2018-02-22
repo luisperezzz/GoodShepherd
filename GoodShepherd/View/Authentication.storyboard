@@ -27,28 +27,28 @@
             </objects>
             <point key="canvasLocation" x="-524" y="54"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="UrY-U2-COy">
             <objects>
-                <viewController id="N0b-TA-pEJ" sceneMemberID="viewController">
+                <viewController id="N0b-TA-pEJ" customClass="LoginViewController" customModule="GoodShepherd" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MpW-Uv-1IN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ekb-gS-4Ez">
-                                <rect key="frame" x="60" y="212" width="200" height="144"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ekb-gS-4Ez">
+                                <rect key="frame" x="40" y="199.5" width="240" height="169"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="NKi-19-NNT">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="65"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NKi-19-NNT">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="70"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PMK-Ug-NaI">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wUh-tz-xqJ">
-                                                <rect key="frame" x="0.0" y="35" width="200" height="30"/>
+                                                <rect key="frame" x="0.0" y="40" width="240" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -56,14 +56,17 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WwQ-8S-M14">
-                                        <rect key="frame" x="0.0" y="75" width="200" height="30"/>
+                                        <rect key="frame" x="0.0" y="90" width="240" height="30"/>
                                         <color key="backgroundColor" red="0.85621929939999997" green="0.85621929939999997" blue="0.85621929939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Iniciar Sesión"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bt-5j-YzJ">
-                                        <rect key="frame" x="0.0" y="115" width="200" height="29"/>
+                                        <rect key="frame" x="0.0" y="140" width="240" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" title="No tienes cuenta? Regístrate"/>
+                                        <connections>
+                                            <action selector="signupAction:" destination="N0b-TA-pEJ" eventType="touchUpInside" id="L6F-Vd-kr0"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -71,14 +74,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ekb-gS-4Ez" firstAttribute="centerY" secondItem="MpW-Uv-1IN" secondAttribute="centerY" id="2XQ-fQ-CrP"/>
-                            <constraint firstItem="ekb-gS-4Ez" firstAttribute="leading" secondItem="Xnr-UG-hXL" secondAttribute="leading" constant="60" id="HtU-bf-lzl"/>
-                            <constraint firstItem="Xnr-UG-hXL" firstAttribute="trailing" secondItem="ekb-gS-4Ez" secondAttribute="trailing" constant="60" id="h2c-Mw-F1l"/>
+                            <constraint firstItem="ekb-gS-4Ez" firstAttribute="leading" secondItem="Xnr-UG-hXL" secondAttribute="leading" constant="40" id="HtU-bf-lzl"/>
+                            <constraint firstItem="Xnr-UG-hXL" firstAttribute="trailing" secondItem="ekb-gS-4Ez" secondAttribute="trailing" constant="40" id="h2c-Mw-F1l"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xnr-UG-hXL"/>
                     </view>
                     <navigationItem key="navigationItem" id="GL6-qw-D78"/>
                     <connections>
-                        <segue destination="yoz-K3-2Yo" kind="show" id="lmN-fm-GUW"/>
+                        <segue destination="yoz-K3-2Yo" kind="show" identifier="SegueMacroPickerViewController" id="lmN-fm-GUW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iX9-qA-C4E" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -88,7 +91,7 @@
         <!--Macros-->
         <scene sceneID="LPb-do-SYY">
             <objects>
-                <viewController id="yoz-K3-2Yo" sceneMemberID="viewController">
+                <viewController id="yoz-K3-2Yo" customClass="MacroPickerViewController" customModule="GoodShepherd" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6ye-Lm-0sI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -147,7 +150,7 @@
         <!--Célula-->
         <scene sceneID="Gai-3I-3tx">
             <objects>
-                <viewController id="Uid-Hl-7W4" sceneMemberID="viewController">
+                <viewController id="Uid-Hl-7W4" customClass="CellPickerViewController" customModule="GoodShepherd" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ywF-Nf-l84">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -229,7 +232,7 @@
         <!--Régistrate-->
         <scene sceneID="Sb0-t5-pGw">
             <objects>
-                <viewController id="cUm-7I-LS1" sceneMemberID="viewController">
+                <viewController id="cUm-7I-LS1" customClass="SignupViewController" customModule="GoodShepherd" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E8l-GK-HIB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -342,7 +345,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SwD-ca-3Iv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2505" y="54"/>
+            <point key="canvasLocation" x="2464" y="54"/>
         </scene>
     </scenes>
     <resources>

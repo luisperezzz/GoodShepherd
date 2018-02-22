@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0029907B203F2A9400FAC63F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0029907A203F2A9400FAC63F /* LoginViewController.swift */; };
+		0029907F203F2AFE00FAC63F /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0029907E203F2AFE00FAC63F /* SignupViewController.swift */; };
+		00299082203F2FBF00FAC63F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00299081203F2FBF00FAC63F /* UIViewExtension.swift */; };
+		009A30F3203F83B100641825 /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009A30F2203F83B100641825 /* ServerManager.swift */; };
 		00D27D9E203E3667003C6739 /* CellPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D27D9D203E3667003C6739 /* CellPickerViewController.swift */; };
 		00D27DA0203E367B003C6739 /* MacroPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D27D9F203E367B003C6739 /* MacroPickerViewController.swift */; };
 		00D27DA3203E36F0003C6739 /* MacroLeaderTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D27DA2203E36F0003C6739 /* MacroLeaderTVCell.swift */; };
@@ -40,6 +44,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0029907A203F2A9400FAC63F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controller/Authentication/Login/LoginViewController.swift; sourceTree = "<group>"; };
+		0029907E203F2AFE00FAC63F /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignupViewController.swift; path = Controller/Authentication/Signup/SignupViewController.swift; sourceTree = "<group>"; };
+		00299081203F2FBF00FAC63F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIViewExtension.swift; path = Extensions/UIViewExtension.swift; sourceTree = "<group>"; };
+		009A30F2203F83B100641825 /* ServerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
 		00D27D9D203E3667003C6739 /* CellPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CellPickerViewController.swift; path = Controller/Authentication/Signup/CellPickerViewController.swift; sourceTree = "<group>"; };
 		00D27D9F203E367B003C6739 /* MacroPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MacroPickerViewController.swift; path = Controller/Authentication/Signup/MacroPickerViewController.swift; sourceTree = "<group>"; };
 		00D27DA2203E36F0003C6739 /* MacroLeaderTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MacroLeaderTVCell.swift; path = Controller/Authentication/Signup/TVCells/MacroLeaderTVCell.swift; sourceTree = "<group>"; };
@@ -75,12 +83,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0029907C203F2A9A00FAC63F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0029907A203F2A9400FAC63F /* LoginViewController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		0029907D203F2AA400FAC63F /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				00D27D9F203E367B003C6739 /* MacroPickerViewController.swift */,
+				00D27D9D203E3667003C6739 /* CellPickerViewController.swift */,
+				0029907E203F2AFE00FAC63F /* SignupViewController.swift */,
+				00D27DA1203E368B003C6739 /* TVCells */,
+			);
+			name = Signup;
+			sourceTree = "<group>";
+		};
+		00299080203F2F9800FAC63F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				00299081203F2FBF00FAC63F /* UIViewExtension.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
 		00D27D9C203E3601003C6739 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				00D27DA1203E368B003C6739 /* TVCells */,
-				00D27D9F203E367B003C6739 /* MacroPickerViewController.swift */,
-				00D27D9D203E3667003C6739 /* CellPickerViewController.swift */,
+				0029907D203F2AA400FAC63F /* Signup */,
+				0029907C203F2A9A00FAC63F /* Login */,
 			);
 			name = Authentication;
 			sourceTree = "<group>";
@@ -96,6 +130,7 @@
 		252684011F44013F00860C4C /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				009A30F2203F83B100641825 /* ServerManager.swift */,
 				252684021F44031800860C4C /* ContactManager.swift */,
 			);
 			name = Manager;
@@ -175,6 +210,7 @@
 		D1FE17101F328CCB00753949 /* GoodShepherd */ = {
 			isa = PBXGroup;
 			children = (
+				00299080203F2F9800FAC63F /* Extension */,
 				D1FE17111F328CCB00753949 /* AppDelegate.swift */,
 				252684011F44013F00860C4C /* Manager */,
 				D1DD48F61F3D22C9001C3523 /* Model */,
@@ -328,7 +364,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00299082203F2FBF00FAC63F /* UIViewExtension.swift in Sources */,
 				D1DD48FB1F3D27A9001C3523 /* SheepSummaryTVCell.swift in Sources */,
+				009A30F3203F83B100641825 /* ServerManager.swift in Sources */,
 				D1DD48FD1F3D32A0001C3523 /* Sheep.swift in Sources */,
 				00D27D9E203E3667003C6739 /* CellPickerViewController.swift in Sources */,
 				2544F4731F57050900428638 /* ContactsVC.swift in Sources */,
@@ -336,9 +374,11 @@
 				D1FE17141F328CCB00753949 /* FirstViewController.swift in Sources */,
 				252684031F44031800860C4C /* ContactManager.swift in Sources */,
 				D1DD48F81F3D2638001C3523 /* CurrentCellVC.swift in Sources */,
+				0029907F203F2AFE00FAC63F /* SignupViewController.swift in Sources */,
 				25F518081F48B4CA00648CCC /* Contact.swift in Sources */,
 				25F5180A1F4D40D100648CCC /* Believer.swift in Sources */,
 				00D27DA0203E367B003C6739 /* MacroPickerViewController.swift in Sources */,
+				0029907B203F2A9400FAC63F /* LoginViewController.swift in Sources */,
 				00D27DA3203E36F0003C6739 /* MacroLeaderTVCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
