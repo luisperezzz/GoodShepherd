@@ -70,10 +70,12 @@ struct ICURL {
     
     static func baseUrlFor(environment: ServerEnvironment) -> String {
         switch environment {
-        case .dev:  return "https://ciddwebdesign.com/wp1"
-        case .pro:  return "https://ibericoclub.com"
+        case .dev:  return "https://immense-cove-23073.herokuapp.com"
+        case .pro:  return "https://immense-cove-23073.herokuapp.com"
         }
     }
+    
+    static var getLeadersURL: String { return "\(ICURL.baseUrl)/api/leaders"}
     
     static var getProductsURL: String { return "\(ICURL.baseUrl)/wp-json/wc/v2/products"}
     static var getOrdersURL: String { return "\(ICURL.baseUrl)/wp-json/wc/v2/orders"}
@@ -115,9 +117,7 @@ class Server {
     var currentRequest : URLSessionDataTask?
     
     
-    
     class func requestBasicAuth(urlString: String?, method: RequestMethod, parameters: Params = nil, completion: @escaping DefaultResponse) -> URLSessionDataTask? {
-        
         
         
         guard let urlString_ = urlString else {
@@ -244,6 +244,14 @@ class Server {
     
     // API URLS
     
+    class func getLeaders(parameters: Params = nil, completion: @escaping DefaultResponse) {
+        self.instance.currentRequest = Server.requestBasicAuth(urlString: ICURL.getLeadersURL, method: .get, parameters: parameters, completion: completion)
+    }
+    
+    
+    
+    /*
+    
     class func getCategories(parameters: Params = nil, completion: @escaping DefaultResponse) {
         self.instance.currentRequest = Server.requestBasicAuth(urlString: ICURL.getCategoriesURL, method: .get, parameters: parameters, completion: completion)
     }
@@ -361,6 +369,7 @@ class Server {
         }
     }
     
+    
     class func updateUser(customerID: String, parameters: Params, completion: @escaping DefaultResponse){
         self.instance.currentRequest = Server.requestBasicAuth(urlString: ICURL.getCustomerInfoURL+"/"+customerID, method: .put, parameters: parameters, completion: completion)
     }
@@ -369,5 +378,6 @@ class Server {
         self.instance.currentRequest = Server.requestBasicAuth(urlString: ICURL.getLinkedProductsURL+"?id=\(recipeID)", method: .get, completion: completion)
     }
     
+    */
     
 }
